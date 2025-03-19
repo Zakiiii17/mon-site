@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Zakaria Bellazaar</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@500&family=Playfair+Display:wght@700&family=Kanit:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* ======== STYLES GLOBAUX ======== */
+    body {
+      background: linear-gradient(135deg, #2F2F2F, #1C1C1C, rgba(28, 28, 28, 0.8));
+      color: #ffffff;
+      font-family: 'Kanit', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Particles Container */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      animation: slideDown 1s ease-in-out;
+    }
+    @keyframes slideDown {
+      0%   { transform: translateY(-100%); }
+      100% { transform: translateY(0); }
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #87CEEB;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 1200px;
+      margin: 80px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Introduction */
+    .intro-text {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 600px;
+    }
+    .intro-text h1 {
+      font-size: 3.5em;
+      font-family: 'VT323', monospace;
+      animation: typing 3s steps(40, end) forwards, blinkCaret 0.75s step-end infinite;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #87CEEB;
+      margin-bottom: 20px;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 100%; }
+    }
+    @keyframes blinkCaret {
+      from, to { border-color: transparent; }
+      50%      { border-color: #87CEEB;     }
+    }
+    .intro-text img {
+      width: 150px;
+      height: auto;
+    }
+
+    /* Sections générales */
+    .section {
+      background: rgba(31, 31, 31, 0.8);
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 15px;
+      text-align: center;
+    }
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      color: #87CEEB;
+      margin-bottom: 20px;
+    }
+
+    /* Animation fadeIn, fadeInUp */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1;   }
+    }
+
+    /* Container de projets (projets, veilles...) */
+    .projets-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    /* Animation de lueur blanche */
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                    0 0 40px rgba(255, 255, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
+                    0 0 50px rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    /* Cartes de projet/veille */
+    .projet {
+      width: 220px;
+      height: 320px;
+      background: rgba(64, 64, 64, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      animation: glow 3s ease-in-out infinite;
+      text-align: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .projet:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+    .projet img.projet-img {
+      max-width: 100%;
+      max-height: 130px; 
+      object-fit: contain;
+      margin-bottom: 5px;
+    }
+    .projet h3 {
+      margin: 5px 0 3px 0;
+      font-size: 1em; 
+    }
+    .projet p {
+      margin: 0 0 5px 0;
+      font-size: 0.9em;
+    }
+    .projet a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-bottom: 5px;
+    }
+    .projet a:hover h3,
+    .projet a:hover p {
+      color: #87CEEB;
+    }
+
+    /* Compétences */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin: 30px 0;
+    }
+    .skill-card {
+      width: 180px;
+      height: 180px;
+      position: relative;
+      perspective: 1000px;
+      border-radius: 50%;
+      overflow: hidden;
+      animation: glow 3s ease-in-out infinite;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                  0 0 40px rgba(255, 255, 255, 0.6);
+    }
+    .skill-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+      border-radius: 50%;
+      background: rgba(64, 64, 64, 0.9);
+    }
+    .skill-card:hover .skill-card-inner {
+      transform: rotateY(180deg);
+    }
+    .skill-card-front,
+    .skill-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .skill-card-front {
+      transform: rotateY(0deg);
+    }
+    .skill-card-back {
+      transform: rotateY(180deg);
+      background: rgba(64, 64, 64, 0.95);
+    }
+    .skill-card-front i {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #87CEEB;
+    }
+    .skill-card-front h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1em;
+      color: #ffffff;
+      margin: 0;
+      padding: 0 10px;
+    }
+    .skill-card-back ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .skill-card-back li {
+      font-size: 0.8em;
+      line-height: 1.4em;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    /* Formulaire Contact */
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      box-shadow: 0 0 15px rgba(135, 206, 235, 0.7);
+      transform: scale(1.02);
+    }
+    .contact-form button {
+      background: #87CEEB;
+      color: #000;
+      border: none;
+      padding: 15px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    .contact-form button:hover {
+      background: #00BFFF;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(0, 0, 0, 0.95);
+      padding: 40px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 1.2em;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+  </style>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        "particles": {
+          "number": {
+            "value": 200,
+            "density": { "enable": true, "value_area": 800 }
+          },
+          "color": { "value": "#ffffff" },
+          "shape": {
+            "type": "triangle",
+            "stroke": { "width": 0, "color": "#000000" },
+            "polygon": { "nb_sides": 3 }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": true
+          },
+          "size": {
+            "value": 3,
+            "random": true
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 6
+          }
+        },
+        "interactivity": {
+          "detect_on": "window",
+          "events": {
+            "onhover":  { "enable": true, "mode": "repulse" },
+            "onclick":  { "enable": true, "mode": "push" },
+            "resize":   true
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": { "opacity": 1 }
+            },
+            "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Particles Container -->
+  <div id="particles-js"></div>
+
+  <!-- Menu de navigation -->
+  <nav id="menu">
+    <ul>
+      <li><a href="#introduction">Présentation</a></li>
+      <li><a href="#projets-entreprise">Projets Entreprise</a></li>
+      <li><a href="#projets-scolaire">Projets Scolaires</a></li>
+      <li><a href="#veilles-techno">Veilles Techno</a></li>
+      <li><a href="#competences">Compétences</a></li>
+      <li><a href="#bts-sio">Parcours BTS SIO</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <!-- Introduction -->
+    <section id="introduction" class="intro-text">
+      <h1>Portfolio Zakaria Bellazaar</h1>
+      <img src="photo_portfolio/Veolia-logo-removebg-preview.png" alt="Logo Veolia">
+    </section>
+
+    <!-- À propos de moi -->
+    <section id="a-propos-de-moi" class="section">
+      <h2>À propos de moi</h2>
+      <p>
+        Bonjour, Je suis étudiant en BTS Services Informatiques aux Organisations (SIO) option SISR, 
+        en alternance chez Helpline. Dans le cadre de mon alternance, je travaille pour Veolia 
+        au sein du support informatique. Mon rôle consiste à assurer le bon fonctionnement des systèmes, 
+        à résoudre les problèmes techniques et à répondre aux besoins des utilisateurs. 
+        Cette expérience m’aide à développer mes compétences techniques et relationnelles 
+        dans un contexte professionnel stimulant.
+      </p>
+    </section>
+
+    <!-- Projets Entreprise -->
+    <section id="projets-entreprise" class="section">
+      <h2>Projets Entreprise</h2>
+      <div class="projets-container">
+        <!-- 8 Projets Entreprise -->
+        <div class="projet">
+          <img src="photo_portfolio/image1.png" alt="VPN Project Image" class="projet-img">
+          <h3>Projet VPN Forticlient</h3>
+          <p>Accès sécurisé aux applications professionnelles distantes.</p>
+          <a href="projets_entreprise/VPN.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio/image2.png" alt="Wi-Fi Project Image" class="projet-img">
+          <h3>Projet Veo Fi</h3>
+          <p>Réseau Wi-Fi interne sécurisé et fiable.</p>
+          <a href="projets_entreprise/Veofi.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio/image3.png" alt="Ticketing Project Image" class="projet-img">
+          <h3>Ticketing</h3>
+          <p>Système de suivi d’incidents et gestion des demandes.</p>
+          <a href="projets_entreprise/TICKETING.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio/image4.png" alt="Google Project Image" class="projet-img">
+          <h3>Mot de passe Google</h3>
+          <p>Réinitialisation et gestion des mots de passe utilisateurs.</p>
+          <a href="projets_entreprise/MDPGOOGLE.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio/image5.png" alt="Citrix Project Image" class="projet-img">
+          <h3>Citrix</h3>
+          <p>Espace de travail virtuel et résolution des problèmes d’accès.</p>
+          <a href="projets_entreprise/citrix.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio/image6.png" alt="Forti Project Image" class="projet-img">
+          <h3>Console Forti</h3>
+          <p>Analyse des erreurs de connexion VPN.</p>
+          <a href="projets_entreprise/Forti.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio/image7.png" alt="Mot de passe AD Project Image" class="projet-img">
+          <h3>Mot de passe AD</h3>
+          <p>Gestion des mots de passe Active Directory.</p>
+          <a href="projets_entreprise/MDP%20AD.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio/image8.png" alt="Création comptes AD Project Image" class="projet-img">
+          <h3>Création comptes AD</h3>
+          <p>Création et configuration des comptes utilisateurs.</p>
+          <a href="projets_entreprise/Creation-des-comptes-AD-doc.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets Scolaires -->
+    <section id="projets-scolaire" class="section">
+      <h2>Projets Scolaires</h2>
+      <div class="projets-container">
+        <!-- 7 Projets Scolaires -->
+        <div class="projet">
+          <img src="photo_portfolio2/img1.png" alt="Icône Formulaire" class="projet-img">
+          <h3>Formulaires</h3>
+          <p>Création de formulaires de contact (HTML/CSS).</p>
+          <a href="projets_scolaires/Formulaire.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio2/img2.png" alt="Logo HTML et CSS" class="projet-img">
+          <h3>Site HTML/CSS</h3>
+          <p>Développement d’un site web statique.</p>
+          <a href="projets_scolaires/SiteHTML.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio2/img3.png" alt="Logo VirtualBox" class="projet-img">
+          <h3>Machine Virtuelle (VM)</h3>
+          <p>Concept et utilisation des VM.</p>
+          <a href="projets_scolaires/VM.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio2/img4.png" alt="Logo Proxmox" class="projet-img">
+          <h3>VM sur Proxmox</h3>
+          <p>Création de VM via Proxmox.</p>
+          <a href="projets_scolaires/VM.proxmox.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio2/img5.png" alt="Logo Proxmox" class="projet-img">
+          <h3>Proxmox</h3>
+          <p>Installation et configuration.</p>
+          <a href="projets_scolaires/Proxmox.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio2/img6.png" alt="Logo Tux Linux" class="projet-img">
+          <h3>Documentation Linux</h3>
+          <p>Commandes et administration Linux.</p>
+          <a href="projets_scolaires/Documentation-Linux-1.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio2/img7.png" alt="Icône 2FA" class="projet-img">
+          <h3>Contournement 2FA</h3>
+          <p>Étude des techniques de contournement.</p>
+          <a href="projets_scolaires/2FA.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Veilles Techno (2 veilles) -->
+    <section id="veilles-techno" class="section">
+      <h2>Veilles Techno</h2>
+      <p>
+        Dans le cadre de ma formation et de ma curiosité personnelle, j’effectue une veille 
+        régulière sur les nouvelles technologies. Voici deux exemples de veilles que j’ai réalisées :
+      </p>
+      <div class="projets-container">
+        <div class="projet">
+          <img src="photo_portfolio2/veille1.png" alt="Veille Techno 1" class="projet-img">
+          <h3>Veille Techno 1</h3>
+          <p>Brève description de la veille technologique.</p>
+          <a href="veilles/veille1.pdf" target="_blank">PDF</a>
+        </div>
+        <div class="projet">
+          <img src="photo_portfolio2/veille2.png" alt="Veille Techno 2" class="projet-img">
+          <h3>Veille Techno 2</h3>
+          <p>Brève description de la veille technologique.</p>
+          <a href="veilles/veille2.pdf" target="_blank">PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="section">
+      <h2>Compétences</h2>
+      <p>
+        Au fil de mes expériences professionnelles et scolaires, j’ai développé des compétences variées. 
+        Ci-dessous, vous trouverez un aperçu des domaines techniques dans lesquels je suis à l’aise, 
+        illustrés par quelques exemples de mes savoir-faire.
+      </p>
+      <div class="skills">
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-network-wired"></i>
+              <h3>Réseaux</h3>
+            </div>
+            <div class="skill-card-back">
+              <ul>
+                <li>Routeurs & Commutateurs</li>
+                <li>VPN & LAN/WAN</li>
+                <li>Gestion du trafic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-server"></i>
+              <h3>Virtualisation</h3>
+            </div>
+            <div class="skill-card-back">
+              <ul>
+                <li>Proxmox, VMware</li>
+                <li>VM & Snapshots</li>
+                <li>Infrastructure Cloud</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Sécurité</h3>
+            </div>
+            <div class="skill-card-back">
+              <ul>
+                <li>Durcissement Systèmes</li>
+                <li>Contrôle d'accès</li>
+                <li>Veille Sécurité</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-card-inner">
+            <div class="skill-card-front">
+              <i class="fas fa-code"></i>
+              <h3>Dév. Web</h3>
+            </div>
+            <div class="skill-card-back">
+              <ul>
+                <li>HTML, CSS</li>
+                <li>Notions JS</li>
+                <li>Front-End Intégration</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours BTS SIO -->
+    <section id="bts-sio" class="section">
+      <h2>Parcours BTS SIO</h2>
+      <p>
+        Actuellement en deuxième année de BTS SIO option SISR, j’ai pu consolider mes connaissances 
+        en administration système, gestion de réseaux et virtualisation. 
+        Cette formation m’a permis d’enrichir mon savoir-faire 
+        et de mieux appréhender les problématiques liées aux systèmes d’information.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Zakaria Bellazaar - Tous droits réservés</p>
+    <div>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
