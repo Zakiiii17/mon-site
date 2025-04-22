@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Veille Technologique : IA & Caméras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Police Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /************************************************
+     * 1. RESET & BASE
+     ***********************************************/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(120deg, #e3f2fd, #ffffff);
+      color: #333;
+      line-height: 1.8;
+      animation: fadeInBody 0.8s ease-in-out forwards;
+      opacity: 0;
+      overflow-x: hidden;
+    }
+    @keyframes fadeInBody {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /************************************************
+     * 2. HEADER (Effet parallax évolué)
+     ***********************************************/
+    header {
+      position: relative;
+      min-height: 60vh;
+      background: linear-gradient(135deg, #1e88e5, #42a5f5);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+    /* Couche parallax 1 */
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 30%, transparent 30%);
+      background-size: 80px 80px;
+      animation: rotateBg 60s linear infinite;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    /* Couche parallax 2 */
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -40%;
+      right: -20%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 20%, transparent 25%);
+      background-size: 100px 100px;
+      animation: swirlBg 70s linear infinite;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    @keyframes rotateBg {
+      0%   { transform: rotate(0deg);   }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes swirlBg {
+      0%   { transform: rotate(0deg);   }
+      100% { transform: rotate(-360deg); }
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: slideDown 1s ease-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      animation: fadeInSub 1.6s ease-in-out;
+    }
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInSub {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /************************************************
+     * 3. MAIN CONTAINER
+     ***********************************************/
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /************************************************
+     * 4. SECTIONS (Effet swirl plus spectaculaire)
+     ***********************************************/
+    section {
+      background: white;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      opacity: 0; /* initial state */
+      animation: swirlIn 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+      /* swirlIn = rotation + échelle + translation */
+    }
+    /* décalage progressif pour chaque section */
+    section:nth-of-type(2) {
+      animation-delay: 0.2s;
+    }
+    section:nth-of-type(3) {
+      animation-delay: 0.4s;
+    }
+    section:nth-of-type(4) {
+      animation-delay: 0.6s;
+    }
+    section:nth-of-type(5) {
+      animation-delay: 0.8s;
+    }
+    section:nth-of-type(6) {
+      animation-delay: 1s;
+    }
+    section:nth-of-type(7) {
+      animation-delay: 1.2s;
+    }
+    section:nth-of-type(8) {
+      animation-delay: 1.4s;
+    }
+    section:nth-of-type(9) {
+      animation-delay: 1.6s;
+    }
+    section:nth-of-type(10) {
+      animation-delay: 1.8s;
+    }
+    section:nth-of-type(11) {
+      animation-delay: 2s;
+    }
+
+    @keyframes swirlIn {
+      0% {
+        opacity: 0;
+        transform: rotate(-360deg) scale(0.6) translateY(80px);
+      }
+      50% {
+        opacity: 0.6;
+        transform: rotate(15deg) scale(1.05) translateY(-8px);
+      }
+      100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1) translateY(0);
+      }
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #1e88e5;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: #1e88e5;
+      display: block;
+      margin-top: 10px;
+      border-radius: 2px;
+    }
+    section p,
+    section ul {
+      margin-bottom: 15px;
+    }
+    section ul li {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    /************************************************
+     * 5. SCHÉMA IA / ML / DL (toujours animé)
+     ***********************************************/
+    .ia-graph {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      animation: fadeInScale 1.5s ease forwards;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      transition: transform 0.6s ease;
+    }
+    .bubble.ia {
+      width: 250px;
+      height: 250px;
+      background: linear-gradient(135deg, #007BFF, #0056b3);
+      animation: pulse 4s infinite;
+      z-index: 1;
+    }
+    .bubble.ml {
+      width: 160px;
+      height: 160px;
+      background: linear-gradient(135deg, #00bcd4, #0097a7);
+      animation: rotateIn 5s ease-in-out infinite;
+      z-index: 2;
+    }
+    .bubble.dl {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, #ff4081, #c51162);
+      animation: floatY 3s ease-in-out infinite;
+      z-index: 3;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4); }
+      70% { box-shadow: 0 0 0 30px rgba(0, 123, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+    }
+    @keyframes rotateIn {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.05); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /************************************************
+     * 6. IMAGES ET ILLUSTRATIONS
+     ***********************************************/
+    .image-block {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .image-block img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease;
+    }
+    .image-block img:hover {
+      transform: scale(1.05) rotateZ(2deg);
+    }
+
+    /************************************************
+     * 7. TABLEAU
+     ***********************************************/
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table thead tr {
+      background: #1e88e5;
+      color: white;
+    }
+    table th,
+    table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    /************************************************
+     * 8. FOOTER
+     ***********************************************/
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e3f2fd;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Veille Technologique : IA &amp; Caméras</h1>
+    <p>Analyse approfondie des technologies intelligentes de vidéosurveillance et de reconnaissance</p>
+  </header>
+
+  <div class="container">
+    <!-- SECTION 1 -->
+    <section>
+      <h2>1. Introduction à l’Intelligence Artificielle</h2>
+      <p>
+        L’intelligence artificielle (<strong>IA</strong>) désigne l’ensemble des méthodes et des technologies
+        permettant à des machines (ordinateurs, robots, systèmes embarqués) d’exécuter des tâches qui nécessitent
+        normalement l’intelligence humaine. Elle repose sur diverses disciplines comme la logique, la statistique,
+        la philosophie de l’esprit ou encore la neurobiologie.
+      </p>
+      <p>
+        Aujourd’hui, on retrouve l’IA dans de nombreux domaines : la santé (diagnostic, chirurgie assistée),
+        la finance (détection de fraudes, conseil automatisé), la conduite autonome (véhicules intelligents),
+        la traduction en ligne (services cloud) et bien sûr la <strong>vidéosurveillance</strong>.
+      </p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section>
+      <h2>2. Schéma IA &gt; ML &gt; DL</h2>
+      <div class="ia-graph">
+        <div class="bubble ia">IA
+          <div class="bubble ml">ML
+            <div class="bubble dl">DL</div>
+          </div>
+        </div>
+      </div>
+      <p class="legend">
+        Le <strong>Deep Learning (DL)</strong> est un sous-domaine du <strong>Machine Learning (ML)</strong>,
+        lui-même compris dans le domaine plus large de l’<strong>IA</strong>.
+      </p>
+      <p>
+        Par exemple, le <strong>Machine Learning</strong> recouvre des algorithmes (régression, arbres de décision,
+        SVM) capables d’apprendre à partir de données. Le <strong>Deep Learning</strong>, lui, s’appuie sur
+        des réseaux de neurones artificiels profonds pour résoudre des problèmes plus complexes
+        (reconnaissance vocale, faciale, détection comportementale, etc.).
+      </p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section>
+      <h2>3. Usages modernes des caméras intelligentes</h2>
+      <p>
+        Les caméras intelligentes analysent activement les flux vidéo afin de détecter des anomalies ou des
+        événements inhabituels. Grâce à l’IA, elles peuvent :
+      </p>
+      <ul>
+        <li>Identifier des objets ou des individus (visages, plaques d’immatriculation)</li>
+        <li>Déterminer des comportements suspects (intrusion, bagarre, présence prolongée)</li>
+        <li>Gérer l’envoi d’alertes en temps réel</li>
+        <li>Fournir des statistiques de passage (comptage de personnes)</li>
+      </ul>
+      <p>
+        Ces technologies sont adoptées dans les transports (gares, aéroports), le commerce (analyse du parcours client),
+        l’événementiel (sécurité de stades), et évidemment la surveillance urbaine (villes intelligentes).
+      </p>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section>
+      <h2>4. Marques &amp; solutions intégrant l’IA</h2>
+      <p>
+        Plusieurs fabricants intègrent désormais l’IA dans leurs caméras, en combinant parfois
+        traitement embarqué (edge computing) et cloud. Voici quelques exemples marquants :
+      </p>
+      <ul>
+        <li><strong>Dahua – TiOC</strong> : IA pour différencier humain/véhicule, projecteurs intégrés, alertes dissuasives</li>
+        <li><strong>Hanwha Vision</strong> : détection faciale, classification multi-objets, suivi intelligent (séries X, Q, P)</li>
+        <li><strong>Pixellot</strong> : captation sportive autonome (matchs filmés sans caméraman)</li>
+        <li><strong>Eneo – IN Series</strong> : détection d’objets, comportements anormaux, automation d’alarmes</li>
+        <li><strong>INSTAR</strong> : traitement local en edge computing, confidentialité des données</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section>
+      <h2>5. Étude de cas : Pixellot</h2>
+      <p>
+        Pixellot s’est imposé dans le sport amateur en offrant une solution permettant de filmer des matchs
+        sans technicien. L’IA suit le ballon, détecte les actions clés, et propose des replays automatiques.
+      </p>
+      <p>
+        Les clubs amateurs peuvent ainsi diffuser leurs matchs en direct, générer des résumés après la rencontre
+        ou analyser tactiquement chaque action. C’est une démocratisation de la captation vidéo professionnelle.
+      </p>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section>
+      <h2>6. Illustration visuelle</h2>
+      <div class="image-block">
+        <!-- Veillez à ce que l'image soit dans un dossier img/ -->
+        <img src="img/illustration-ia.png" alt="Illustration IA et Caméras">
+      </div>
+      <p class="legend">
+        Ici, une illustration représentant la hiérarchie IA &gt; ML &gt; DL et leur application
+        à la vidéosurveillance moderne. Veillez à adapter le chemin de l’image si nécessaire.
+      </p>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section>
+      <h2>7. Perspectives d’avenir</h2>
+      <p>
+        Les caméras IA évolueront davantage vers le <strong>edge computing</strong> complet,
+        afin de limiter le recours au cloud et améliorer la réactivité. On attend aussi :
+      </p>
+      <ul>
+        <li>Des algorithmes prédictifs capables de repérer des signaux faibles avant un incident</li>
+        <li>Une synergie avec l’IoT (capteurs de sons, drones, etc.)</li>
+        <li>Un meilleur contrôle de la vie privée, exigé par la réglementation (RGPD et équivalents)</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section>
+      <h2>8. Cadre légal et RGPD</h2>
+      <p>
+        L’usage des caméras intelligentes doit respecter le <strong>Règlement Général sur la Protection des Données</strong>.
+        Il est notamment requis d’informer les personnes filmées, de justifier la finalité du traitement,
+        de sécuriser les accès et de respecter une durée de conservation réduite.
+      </p>
+      <p>
+        Toute exploitation de la reconnaissance faciale est particulièrement encadrée et nécessite,
+        dans bien des cas, une <strong>analyse d’impact</strong> (AIPD) pour évaluer les risques
+        pour les libertés individuelles.
+      </p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section>
+      <h2>9. Caméras IA et cybersécurité</h2>
+      <p>
+        Les caméras connectées sont vulnérables aux attaques informatiques. Des hackers peuvent s’en servir
+        comme point d’entrée dans un réseau ou lancer des attaques par déni de service (DDoS) via un botnet.
+      </p>
+      <ul>
+        <li>Changer les mots de passe d’usine</li>
+        <li>Faire les mises à jour logicielles régulièrement</li>
+        <li>Segmenter le réseau (VLAN dédié aux caméras)</li>
+        <li>Utiliser le chiffrement (HTTPS, TLS, VPN si nécessaire)</li>
+      </ul>
+      <p>
+        Une bonne politique de cybersécurité est donc cruciale pour protéger à la fois les données vidéo
+        et l’infrastructure dans son ensemble.
+      </p>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section>
+      <h2>10. Comparatif des solutions IA</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Marque</th>
+            <th>IA</th>
+            <th>Usage</th>
+            <th>Spécificité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dahua</td>
+            <td>Oui</td>
+            <td>Surveillance périmétrique</td>
+            <td>Sirène &amp; flash LED</td>
+          </tr>
+          <tr>
+            <td>Hanwha</td>
+            <td>Oui</td>
+            <td>Analyse comportementale</td>
+            <td>Edge IA</td>
+          </tr>
+          <tr>
+            <td>Pixellot</td>
+            <td>Oui</td>
+            <td>Captation sportive</td>
+            <td>Full auto</td>
+          </tr>
+          <tr>
+            <td>Eneo</td>
+            <td>Oui</td>
+            <td>Sécurité haut de gamme</td>
+            <td>Détection d’objets &amp; attitudes</td>
+          </tr>
+          <tr>
+            <td>INSTAR</td>
+            <td>Oui</td>
+            <td>Monitoring privé</td>
+            <td>Analyse sur site (edge)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Chaque marque se démarque par son approche (cloud vs edge), la sophistication de son algorithme
+        et son ergonomie d’utilisation. Le choix dépendra du budget, de la taille et du contexte
+        d’utilisation (résidentiel, commercial, industriel, urbain, etc.).
+      </p>
+    </section>
+
+    <!-- SECTION 11 -->
+    <section>
+      <h2>11. Glossaire</h2>
+      <ul>
+        <li><strong>IA</strong> : Intelligence Artificielle</li>
+        <li><strong>ML</strong> : Machine Learning (apprentissage automatique)</li>
+        <li><strong>DL</strong> : Deep Learning (apprentissage profond, réseaux de neurones)</li>
+        <li><strong>Edge computing</strong> : traitement local sans passer par le cloud</li>
+        <li><strong>RGPD</strong> : Règlement Général sur la Protection des Données</li>
+        <li><strong>AIPD</strong> : Analyse d’Impact sur la Protection des Données</li>
+      </ul>
+      <p>
+        Avec ces définitions, il est plus facile de comprendre les mécanismes et la terminologie
+        de l’IA appliquée à la vidéosurveillance.
+      </p>
+    </section>
+
+  </div><!-- .container -->
+
+  <footer>
+    &copy; 2025 – Veille Technologique IA &amp; Caméras
+  </footer>
+</body>
+</html>
+
