@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Zakaria Bellazaar</title>
@@ -95,7 +97,7 @@
     }
     @keyframes blinkCaret {
       from, to { border-color: transparent; }
-      50%      { border-color: #87CEEB; }
+      50%      { border-color: #87CEEB;     }
     }
     .intro-text img {
       width: 150px;
@@ -124,7 +126,7 @@
     }
     @keyframes fadeInUp {
       from { transform: translateY(50px); opacity: 0; }
-      to   { transform: translateY(0); opacity: 1; }
+      to   { transform: translateY(0); opacity: 1;   }
     }
 
     /* Container de projets (projets, veilles...) */
@@ -171,13 +173,13 @@
     }
     .projet img.projet-img {
       max-width: 100%;
-      max-height: 130px;
+      max-height: 130px; 
       object-fit: contain;
       margin-bottom: 5px;
     }
     .projet h3 {
       margin: 5px 0 3px 0;
-      font-size: 1em;
+      font-size: 1em; 
     }
     .projet p {
       margin: 0 0 5px 0;
@@ -325,6 +327,303 @@
       box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
       animation: fadeIn 2s ease-in-out;
     }
+
+    .section-bts {
+  color: #ffffff;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.section-bts h2 {
+  font-size: 2.2em;
+  color: #87CEEB;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+  border-bottom: 1px solid #87CEEB;
+  padding-bottom: 10px;
+}
+
+.bts-intro {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7em;
+}
+
+.bts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.bts-card {
+  background: rgba(40, 40, 40, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  width: 350px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.bts-card:hover {
+  transform: scale(1.03);
+}
+
+.bts-icon {
+  font-size: 2.5em;
+  color: #FFD700;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.bts-card h3 {
+  color: #87CEEB;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.bts-card p {
+  font-size: 1.05em;
+  margin-bottom: 15px;
+  line-height: 1.5em;
+}
+
+.bts-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bts-card ul li::before {
+  content: "• ";
+  color: #87CEEB;
+  margin-right: 5px;
+}
+
+.bts-card ul li {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+    /* === Veolia Présentation === */
+#veolia h2 {
+  color: #87CEEB;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid #87CEEB;
+  padding-bottom: 10px;
+}
+
+.veolia-container {
+  max-width: 1000px;
+  margin: auto;
+  color: #ffffff;
+  font-family: 'Kanit', sans-serif;
+}
+
+.veolia-intro,
+.veolia-role {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.veolia-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.veolia-card {
+  background: rgba(64, 64, 64, 0.85);
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.veolia-card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.veolia-card i {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #FFD700; /* jaune doré pour les icônes */
+}
+
+.veolia-card h3 {
+  color: #87CEEB;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+    /* === Parcours === */
+#parcours {
+  text-align: left;
+  background: rgba(31, 31, 31, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+#parcours h2 {
+  font-size: 2em;
+  color: #87CEEB;
+  font-family: 'Orbitron', sans-serif;
+  border-bottom: 1px solid #87CEEB;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.formation-item {
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-family: 'Kanit', sans-serif;
+  line-height: 1.6;
+}
+
+.formation-item strong {
+  font-weight: 700;
+  color: #FFD700; /* Jaune doré pour les établissements */
+}
+
+
+  
+#cv h2, #cv h3 {
+  color: #87CEEB;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.cv-btn {
+  display: block;
+  width: fit-content;
+  margin: 15px auto 30px auto;
+  padding: 12px 25px;
+  background: #87CEEB;
+  color: #000;
+  font-weight: bold;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.1em;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(135, 206, 235, 0.3);
+}
+
+.cv-btn:hover {
+  background: #00BFFF;
+  transform: scale(1.05);
+  color: #000;
+}
+
+.cv-preview-wrapper {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.cv-preview {
+  width: 100%;
+  height: 500px;
+  border: none;
+  pointer-events: none;
+}
+
+/* === A propos clair et propre === */
+.dark-about {
+  background: transparent;
+  color: #ffffff;
+  padding: 80px 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-photo {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+.about-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-text .intro {
+  color: #FF6347;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.about-text h1 {
+  font-size: 3.2em;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.about-text h2 {
+  font-size: 1.8em;
+  color: #87CEEB;
+  margin-bottom: 25px;
+}
+
+.about-text .veolia {
+  color: #FFD700;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  margin-bottom: 18px;
+  line-height: 1.7em;
+}
+
+.linkedin-link {
+  color: #1e90ff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.signoff {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+
   </style>
 
   <!-- Particles.js -->
@@ -403,11 +702,11 @@
   <nav id="menu">
     <ul>
       <li><a href="#introduction">Présentation</a></li>
+      <li><a href="#competences">Parcours</a></li>
+      <li><a href="#cv">CV</a></li>
       <li><a href="#projets-entreprise">Projets Entreprise</a></li>
       <li><a href="#projets-scolaire">Projets Scolaires</a></li>
       <li><a href="#veilles-techno">Veilles Techno</a></li>
-      <li><a href="#competences">Compétences</a></li>
-      <li><a href="#bts-sio">Parcours BTS SIO</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -420,183 +719,69 @@
       <img src="photo_portfolio/Veolia-logo-removebg-preview.png" alt="Logo Veolia">
     </section>
 
-    <!-- À propos de moi -->
-    <section id="a-propos-de-moi" class="section">
-      <h2>À propos de moi</h2>
-      <p>
-        Bonjour, Je suis étudiant en BTS Services Informatiques aux Organisations (SIO) option SISR, 
-        en alternance chez Helpline. Dans le cadre de mon alternance, je travaille pour Veolia 
-        au sein du support informatique. Mon rôle consiste à assurer le bon fonctionnement des systèmes, 
-        à résoudre les problèmes techniques et à répondre aux besoins des utilisateurs. 
-        Cette expérience m’aide à développer mes compétences techniques et relationnelles 
-        dans un contexte professionnel stimulant.
-      </p>
-    </section>
-
-    <!-- Projets Entreprise -->
-    <section id="projets-entreprise" class="section">
-      <h2>Projets Entreprise</h2>
-      <div class="projets-container">
-        <!-- 8 Projets Entreprise -->
-        <div class="projet">
-          <img src="photo_portfolio/image1.png" alt="VPN Project Image" class="projet-img">
-          <h3>Projet VPN Forticlient</h3>
-          <p>Accès sécurisé aux applications professionnelles distantes.</p>
-          <a href="projets_entreprise/VPN.pdf" target="_blank">PDF</a>
+    <section id="a-propos-de-moi" class="section dark-about">
+      <div class="about-wrapper">
+        <div class="about-photo">
+          <img src="photo_portfolio/Veolia-logo-removebg-preview.png" alt="Zakaria en entreprise">
         </div>
-        <div class="projet">
-          <img src="photo_portfolio/image2.png" alt="Wi-Fi Project Image" class="projet-img">
-          <h3>Projet Veo Fi</h3>
-          <p>Réseau Wi-Fi interne sécurisé et fiable.</p>
-          <a href="projets_entreprise/Veofi.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio/image3.png" alt="Ticketing Project Image" class="projet-img">
-          <h3>Ticketing</h3>
-          <p>Système de suivi d’incidents et gestion des demandes.</p>
-          <a href="projets_entreprise/TICKETING.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio/image4.png" alt="Google Project Image" class="projet-img">
-          <h3>Mot de passe Google</h3>
-          <p>Réinitialisation et gestion des mots de passe utilisateurs.</p>
-          <a href="projets_entreprise/MDPGOOGLE.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio/image5.png" alt="Citrix Project Image" class="projet-img">
-          <h3>Citrix</h3>
-          <p>Espace de travail virtuel et résolution des problèmes d’accès.</p>
-          <a href="projets_entreprise/citrix.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio/image6.png" alt="Forti Project Image" class="projet-img">
-          <h3>Console Forti</h3>
-          <p>Analyse des erreurs de connexion VPN.</p>
-          <a href="projets_entreprise/Forti.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio/image7.png" alt="Mot de passe AD Project Image" class="projet-img">
-          <h3>Mot de passe AD</h3>
-          <p>Gestion des mots de passe Active Directory.</p>
-          <a href="projets_entreprise/MDP%20AD.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio/image8.png" alt="Création comptes AD Project Image" class="projet-img">
-          <h3>Création comptes AD</h3>
-          <p>Création et configuration des comptes utilisateurs.</p>
-          <a href="projets_entreprise/Creation-des-comptes-AD-doc.pdf" target="_blank">PDF</a>
+        <div class="about-text">
+          <p class="intro">Bonjour, je me présente</p>
+          <h1>Zakaria Bellazaar</h1>
+          <h2>Technicien Helpdesk chez <span class="veolia">Veolia</span></h2>
+          <p>
+            Je suis actuellement en alternance chez <strong>Helpline</strong>, en poste chez <strong>Veolia</strong> à Aubervilliers.
+            J’interviens en tant que technicien support informatique pour assurer le bon fonctionnement des postes utilisateurs,
+            gérer les incidents et assister les utilisateurs à distance ou sur site.
+          </p>
+          
+          <p>
+            Pour en savoir plus, retrouvez-moi sur <a href="#" class="linkedin-link">LinkedIn</a>.
+          </p>
+          <p class="signoff">Bonne visite !</p>
         </div>
       </div>
     </section>
+    
 
-    <!-- Projets Scolaires -->
-    <section id="projets-scolaire" class="section">
-      <h2>Projets Scolaires</h2>
-      <div class="projets-container">
-        <!-- Projets Scolaires existants -->
-        <div class="projet">
-          <img src="photo_portfolio2/img1.png" alt="Icône Formulaire" class="projet-img">
-          <h3>Formulaires</h3>
-          <p>Création de formulaires de contact (HTML/CSS).</p>
-          <a href="projets_scolaires/Formulaire.pdf" target="_blank">PDF</a>
+    
+    
+    <section id="veolia" class="section">
+      <h2>VEOLIA</h2>
+      <div class="veolia-container">
+        <div class="veolia-intro">
+          <p>
+            Veolia est un groupe international expert dans la gestion optimisée des ressources. 
+            L’entreprise intervient dans trois domaines principaux :
+          </p>
         </div>
-        <div class="projet">
-          <img src="photo_portfolio2/img2.png" alt="Logo HTML et CSS" class="projet-img">
-          <h3>Site HTML/CSS</h3>
-          <p>Développement d’un site web statique.</p>
-          <a href="projets_scolaires/SiteHTML.pdf" target="_blank">PDF</a>
+        <div class="veolia-grid">
+          <div class="veolia-card">
+            <i class="fas fa-tint"></i>
+            <h3>Eau</h3>
+            <p>Traitement et distribution d’eau potable, assainissement et dépollution.</p>
+          </div>
+          <div class="veolia-card">
+            <i class="fas fa-recycle"></i>
+            <h3>Déchets</h3>
+            <p>Collecte, tri, recyclage et valorisation des déchets ménagers et industriels.</p>
+          </div>
+          <div class="veolia-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Énergie</h3>
+            <p>Gestion énergétique des bâtiments, réseaux de chaleur et énergies renouvelables.</p>
+          </div>
         </div>
-        <div class="projet">
-          <img src="photo_portfolio2/img3.png" alt="Logo VirtualBox" class="projet-img">
-          <h3>Machine Virtuelle (VM)</h3>
-          <p>Concept et utilisation des VM.</p>
-          <a href="projets_scolaires/VM.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/img4.png" alt="Logo Proxmox" class="projet-img">
-          <h3>VM sur Proxmox</h3>
-          <p>Création de VM via Proxmox.</p>
-          <a href="projets_scolaires/VM.proxmox.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/img5.png" alt="Logo Proxmox" class="projet-img">
-          <h3>Proxmox</h3>
-          <p>Installation et configuration.</p>
-          <a href="projets_scolaires/Proxmox.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/img6.png" alt="Logo Tux Linux" class="projet-img">
-          <h3>Documentation Linux</h3>
-          <p>Commandes et administration Linux.</p>
-          <a href="projets_scolaires/Documentation-Linux-1.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/img7.png" alt="Icône 2FA" class="projet-img">
-          <h3>Contournement 2FA</h3>
-          <p>Étude des techniques de contournement.</p>
-          <a href="projets_scolaires/2FA.pdf" target="_blank">PDF</a>
-        </div>
-        <!-- Nouveaux projets scolaires -->
-        <div class="projet">
-          <img src="photo_portfolio2/debian.png" alt="Debian Client" class="projet-img">
-          <h3>Debian Client</h3>
-          <p>Installation et configuration de Debian côté client.</p>
-          <a href="projets_scolaires/Debian.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/glpi.png" alt="GLPI Project" class="projet-img">
-          <h3>GLPI</h3>
-          <p>Gestion Libre de Parc Informatique.</p>
-          <a href="projets_scolaires/Projet GLPI2.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/haproxy.png" alt="HAProxy Project" class="projet-img">
-          <h3>HAProxy</h3>
-          <p>Logiciel de répartition de charge (Load Balancing).</p>
-          <a href="projets_scolaires/HAPROXY.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/nginx.png" alt="Nginx Project" class="projet-img">
-          <h3>Nginx</h3>
-          <p>Serveur HTTP et reverse proxy performant.</p>
-          <a href="projets_scolaires/Nginx.pdf" target="_blank">PDF</a>
-        </div>
-        <div class="projet">
-          <img src="photo_portfolio2/zabbix.png" alt="Zabbix Project" class="projet-img">
-          <h3>Zabbix</h3>
-          <p>Installation et configuration de la solution de supervision.</p>
-          <a href="projets_scolaires/zabbix.pdf" target="_blank">PDF</a>
+        <div class="veolia-role">
+          <p>
+            En tant qu’alternant chez Helpline, j’interviens sur le site de Veolia à Aubervilliers.
+            Mon rôle est d’assurer le support informatique des utilisateurs, la gestion du parc et la résolution des incidents techniques.
+          </p>
         </div>
       </div>
     </section>
+    
 
-    <!-- Veilles Techno -->
-    <section id="veilles-techno" class="section">
-      <h2>Veilles Techno</h2>
-      <p>
-        Dans le cadre de ma formation et de ma curiosité personnelle, j’effectue une veille 
-        régulière sur les nouvelles technologies. Voici quelques veilles que j’ai réalisées :
-      </p>
-      <div class="projets-container">
-        <!-- VEILLE 1 avec chemin local absolu -->
-        <div class="projet">
-          <img src="photo_portfolio2/veille1.png" alt="Veille Techno 1" class="projet-img">
-          <h3>Veille Techno 1</h3>
-          <p>Analyse des technologies intelligentes de vidéosurveillance (IA & Caméras).</p>
-          <!-- Chemin local absolu pointant vers le fichier techno.html -->
-          <a href="file:///C:/Users/zakaria/Downloads/portfolio/techno.html" target="_blank">
-            Ouvrir la veille HTML
-          </a>
-        </div>
-
-        <div class="projet">
-          <img src="photo_portfolio2/veille2.png" alt="Veille Techno 2" class="projet-img">
-          <h3>Veille Techno 2</h3>
-          <p>Brève description de la veille technologique.</p>
-          <a href="veilles/veille2.pdf" target="_blank">PDF</a>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Compétences -->
     <section id="competences" class="section">
@@ -670,17 +855,269 @@
       </div>
     </section>
 
-    <!-- Parcours BTS SIO -->
-    <section id="bts-sio" class="section">
-      <h2>Parcours BTS SIO</h2>
-      <p>
-        Actuellement en deuxième année de BTS SIO option SISR, j’ai pu consolider mes connaissances 
-        en administration système, gestion de réseaux et virtualisation. 
-        Cette formation m’a permis d’enrichir mon savoir-faire 
-        et de mieux appréhender les problématiques liées aux systèmes d’information.
-      </p>
-    </section>
+<section id="parcours" class="section">
+  <h2>PARCOURS</h2>
 
+  <div class="formation-item">
+    <p>2023 - 2025</p>
+    <strong>IMCP - Institut du Marais-Charlemagne-Pollès</strong> | Paris<br>
+    BTS : informatique SIO spécialité SISR – en cours
+  </div>
+
+  <div class="formation-item">
+    <p>09/2022 - 07/2023</p>
+    <strong>Université Sorbonne Paris Nord</strong> | Villetaneuse<br>
+    Licence : Licence Informatique L1 – Étudiant 1ère année licence informatique semestre
+  </div>
+
+  <div class="formation-item">
+    <p>09/2020 - 07/2021</p>
+    <strong>Lycée Jean Calvin</strong> | Noyon<br>
+    Baccalauréat : Bac Générale Spécialité Maths, Physique Chimie Option Maths expertes – Mention assez bien
+  </div>
+
+  <div class="formation-item">
+    <p>09/2016 - 07/2018</p>
+    <strong>Collège Louis Pasteur</strong> | Noyon<br>
+    Brevet des collèges – Mention bien
+  </div>
+</section>
+
+
+<section id="cv" class="section">
+  <h2>CV</h2>
+
+  <!-- Bouton stylé -->
+  <a class="cv-btn" href="Zakaria_Bellazaar_CV.pdf" target="_blank">
+    Télécharger mon CV (PDF)
+  </a>
+
+  <!-- Aperçu PDF -->
+  <div class="cv-preview-wrapper">
+    <iframe class="cv-preview"
+            src="Zakaria_Bellazaar_CV.pdf#toolbar=0"
+            title="Aperçu CV"
+            loading="lazy"></iframe>
+  </div>
+  <section id="bts-sio" class="section section-bts">
+    <h2>BTS SIO – Services Informatiques aux Organisations</h2>
+  
+    <p class="bts-intro">
+      Le <strong>BTS SIO</strong> est une formation en deux ans qui forme des techniciens capables de répondre aux besoins informatiques des entreprises. 
+      Elle propose deux spécialisations : <strong>SISR</strong> pour l'infrastructure réseau et <strong>SLAM</strong> pour le développement d'applications.
+    </p>
+  
+    <div class="bts-grid">
+      <!-- SISR -->
+      <div class="bts-card">
+        <i class="fas fa-network-wired bts-icon"></i>
+        <h3>Option SISR</h3>
+        <p>
+          L’option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux) prépare aux métiers liés à l’installation, la maintenance, 
+          la sécurisation et l’optimisation des infrastructures réseaux et serveurs.
+        </p>
+        <ul>
+          <li>Gestion de serveurs (Linux, Windows)</li>
+          <li>Réseaux, virtualisation, VPN</li>
+          <li>Sécurité informatique</li>
+        </ul>
+      </div>
+  
+      <!-- SLAM -->
+      <div class="bts-card">
+        <i class="fas fa-code bts-icon"></i>
+        <h3>Option SLAM</h3>
+        <p>
+          L’option <strong>SLAM</strong> (Solutions Logicielles et Applications Métiers) est orientée développement. 
+          Elle forme des développeurs capables de concevoir des applications web, mobiles ou logiciels métiers.
+        </p>
+        <ul>
+          <li>Développement Web & Logiciel</li>
+          <li>Base de données & API</li>
+          <li>Langages (PHP, Java, Python...)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+     <!-- Tableau de synthèse -->
+  <h3>Tableau de synthèse</h3>
+
+  <!-- Aperçu tableau -->
+  <div class="cv-preview-wrapper">
+    <iframe class="cv-preview"
+            src="tableau_synthese_e5.pdf"
+            title="Aperçu Tableau"
+            loading="lazy"></iframe>
+  </div>
+
+  <!-- Bouton stylé -->
+  <a class="cv-btn" href="tableau_synthese_e5.pdf" target="_blank">
+    Télécharger / Voir le tableau de synthèse
+  </a>
+</section>
+
+<!-- Projets Entreprise -->
+<section id="projets-entreprise" class="section">
+  <h2>Projets Entreprise</h2>
+  <div class="projets-container">
+    <!-- 8 Projets Entreprise -->
+    <div class="projet">
+      <img src="photo_portfolio/image1.png" alt="VPN Project Image" class="projet-img">
+      <h3>Projet VPN Forticlient</h3>
+      <p>Accès sécurisé aux applications professionnelles distantes.</p>
+      <a href="projets_entreprise/VPN.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio/image2.png" alt="Wi-Fi Project Image" class="projet-img">
+      <h3>Projet Veo Fi</h3>
+      <p>Réseau Wi-Fi interne sécurisé et fiable.</p>
+      <a href="projets_entreprise/Veofi.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio/image3.png" alt="Ticketing Project Image" class="projet-img">
+      <h3>Ticketing</h3>
+      <p>Système de suivi d’incidents et gestion des demandes.</p>
+      <a href="projets_entreprise/TICKETING.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio/image4.png" alt="Google Project Image" class="projet-img">
+      <h3>Mot de passe Google</h3>
+      <p>Réinitialisation et gestion des mots de passe utilisateurs.</p>
+      <a href="projets_entreprise/MDPGOOGLE.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio/image5.png" alt="Citrix Project Image" class="projet-img">
+      <h3>Citrix</h3>
+      <p>Espace de travail virtuel et résolution des problèmes d’accès.</p>
+      <a href="projets_entreprise/citrix.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio/image6.png" alt="Forti Project Image" class="projet-img">
+      <h3>Console Forti</h3>
+      <p>Analyse des erreurs de connexion VPN.</p>
+      <a href="projets_entreprise/Forti.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio/image7.png" alt="Mot de passe AD Project Image" class="projet-img">
+      <h3>Mot de passe AD</h3>
+      <p>Gestion des mots de passe Active Directory.</p>
+      <a href="projets_entreprise/MDP%20AD.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio/image8.png" alt="Création comptes AD Project Image" class="projet-img">
+      <h3>Création comptes AD</h3>
+      <p>Création et configuration des comptes utilisateurs.</p>
+      <a href="projets_entreprise/Creation-des-comptes-AD-doc.pdf" target="_blank">PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- Projets Scolaires -->
+<section id="projets-scolaire" class="section">
+  <h2>Projets Scolaires</h2>
+  <div class="projets-container">
+    <!-- 7 Projets Scolaires -->
+    <div class="projet">
+      <img src="photo_portfolio2/img1.png" alt="Icône Formulaire" class="projet-img">
+      <h3>Formulaires</h3>
+      <p>Création de formulaires de contact (HTML/CSS).</p>
+      <a href="projets_scolaires/Formulaire.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/img2.png" alt="Logo HTML et CSS" class="projet-img">
+      <h3>Site HTML/CSS</h3>
+      <p>Développement d’un site web statique.</p>
+      <a href="projets_scolaires/SiteHTML.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/img3.png" alt="Logo VirtualBox" class="projet-img">
+      <h3>Machine Virtuelle (VM)</h3>
+      <p>Concept et utilisation des VM.</p>
+      <a href="projets_scolaires/VM.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/img4.png" alt="Logo Proxmox" class="projet-img">
+      <h3>VM sur Proxmox</h3>
+      <p>Création de VM via Proxmox.</p>
+      <a href="projets_scolaires/VM.proxmox.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/img5.png" alt="Logo Proxmox" class="projet-img">
+      <h3>Proxmox</h3>
+      <p>Installation et configuration.</p>
+      <a href="projets_scolaires/Proxmox.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/img6.png" alt="Logo Tux Linux" class="projet-img">
+      <h3>Documentation Linux</h3>
+      <p>Commandes et administration Linux.</p>
+      <a href="projets_scolaires/Documentation-Linux-1.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/img7.png" alt="Icône 2FA" class="projet-img">
+      <h3>Contournement 2FA</h3>
+      <p>Étude des techniques de contournement.</p>
+      <a href="projets_scolaires/2FA.pdf" target="_blank">PDF</a>
+    </div>
+    <!-- NOUVEAUX PROJETS DEMANDÉS -->
+    <div class="projet">
+      <img src="photo_portfolio2/debian.png" alt="Debian Client" class="projet-img">
+      <h3>Debian Client</h3>
+      <p>Installation et configuration de Debian côté client.</p>
+      <a href="projets_scolaires/Debian.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/glpi.png" alt="GLPI Project" class="projet-img">
+      <h3>GLPI</h3>
+      <p>Gestion Libre de Parc Informatique.</p>
+      <a href="projets_scolaires/Projet GLPI2.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/haproxy.png" alt="HAProxy Project" class="projet-img">
+      <h3>HAProxy</h3>
+      <p>Logiciel de répartition de charge (Load Balancing).</p>
+      <a href="projets_scolaires/HAPROXY.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/nginx.png" alt="Nginx Project" class="projet-img">
+      <h3>Nginx</h3>
+      <p>Serveur HTTP et reverse proxy performant.</p>
+      <a href="projets_scolaires/Nginx.pdf" target="_blank">PDF</a>
+    </div>
+      <div class="projet">
+        <img src="photo_portfolio2/zabbix.png" alt="Zabbix" class="projet-img">
+        <h3>Zabbix</h3>
+        <p>Installation et configuration de Zabbix.</p>
+        <a href="projets_scolaires/zabbix.pdf" target="_blank">PDF</a>
+      </div>
+    
+  </div>
+</section>
+
+<!-- Veilles Techno (2 veilles) -->
+<section id="veilles-techno" class="section">
+  <h2>Veilles Techno</h2>
+  <p>
+    Dans le cadre de ma formation et de ma curiosité personnelle, j’effectue une veille 
+    régulière sur les nouvelles technologies. Voici deux exemples de veilles que j’ai réalisées :
+  </p>
+  <div class="projets-container">
+    <div class="projet">
+      <img src="photo_portfolio2/veille1.png" alt="Veille Techno 1" class="projet-img">
+      <h3>Veille Techno 1</h3>
+      <p>Brève description de la veille technologique.</p>
+      <a href="veilles/veille1.pdf" target="_blank">PDF</a>
+    </div>
+    <div class="projet">
+      <img src="photo_portfolio2/veille2.png" alt="Veille Techno 2" class="projet-img">
+      <h3>Veille Techno 2</h3>
+      <p>Brève description de la veille technologique.</p>
+      <a href="veilles/veille2.pdf" target="_blank">PDF</a>
+    </div>
+    
+  </div>
+</section>
     <!-- Contact -->
     <section id="contact" class="section">
       <h2>Contact</h2>
@@ -704,4 +1141,3 @@
   </footer>
 </body>
 </html>
-
