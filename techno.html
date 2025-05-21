@@ -15,6 +15,37 @@
       padding: 0;
       box-sizing: border-box;
     }
+    .timeline {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px 0 20px 0;
+  padding: 20px;
+  background: #f0f8ff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1e88e5;
+  white-space: nowrap;
+  text-align: center;
+  min-width: 180px;
+}
+
+.timeline-item span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+
     html {
       scroll-behavior: smooth;
     }
@@ -342,6 +373,13 @@
         la traduction en ligne (services cloud) et bien sûr la <strong>vidéosurveillance</strong>.
       </p>
     </section>
+    <div class="timeline">
+      <div class="timeline-item"><span>2024</span> Caméras IA plus accessibles</div>
+      <div class="timeline-item"><span>2024</span> Déploiement massif de l’edge computing</div>
+      <div class="timeline-item"><span>2025</span> IA prédictive dans la vidéosurveillance</div>
+      <div class="timeline-item"><span>2025</span> Renforcement du RGPD & IA Act (UE)</div>
+    </div>
+    
 
     <!-- SECTION 2 -->
     <section>

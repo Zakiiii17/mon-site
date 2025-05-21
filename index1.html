@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Veille Technologique : Biométrie par la rétine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(120deg, #f0f8ff, #ffffff);
+      color: #333;
+      line-height: 1.8;
+      animation: fadeInBody 0.8s ease-in-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInBody {
+      to { opacity: 1; }
+    }
+    header {
+      background: linear-gradient(135deg, #1e88e5, #42a5f5);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; }
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 1400px;
+      margin: auto;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .image-gallery img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      object-fit: cover;
+    }
+    section {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1e88e5;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 10px; }
+    a { color: #1e88e5; text-decoration: none; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: #e3f2fd;
+      color: #555;
+    }
+    .example-box {
+      background-color: #f9f9f9;
+      border-left: 5px solid #1e88e5;
+      padding: 20px;
+      margin-top: 20px;
+      font-style: italic;
+    }
+      .timeline-point {
+      width: 20px;
+      height: 20px;
+      background: #1e88e5;
+      border-radius: 50%;
+      margin: auto;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .timeline-point:hover {
+      background: #f50057;
+      transform: scale(1.2);
+    }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Veille Technologique : Biométrie par la rétine</h1>
+    <p>Analyse approfondie des enjeux et applications modernes de la reconnaissance rétinienne</p>
+  </header>
+  <div class="container">
+    <div class="main-content">
+      
+
+  <div style="background-color: #e3f2fd; padding: 20px; border-left: 5px solid #1e88e5; border-radius: 8px; margin-bottom: 20px;">
+  <p><strong>ℹ️ Introduction :</strong> Depuis son apparition dans les années 1980, la biométrie par la rétine a suivi une évolution marquée par la miniaturisation des capteurs, l’essor de l’intelligence artificielle et la diversification de ses usages. D’abord réservée aux institutions de défense, elle est aujourd’hui déployée dans des secteurs variés comme la santé, les transports, la finance et l’identité numérique. Cette frise retrace les grandes étapes de cette progression.</p>
+</div>
+  <div class="timeline-horizontal">
+    <div class="timeline-event">
+      <div class="timeline-circle"></div>
+      <div class="timeline-date">1981</div>
+      <div class="timeline-desc">Brevet biométrie rétinienne</div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-circle"></div>
+      <div class="timeline-date">1990s</div>
+      <div class="timeline-desc">Usage militaire et gouvernemental</div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-circle"></div>
+      <div class="timeline-date">2000s</div>
+      <div class="timeline-desc">Début dans le civil (banques, labos)</div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-circle"></div>
+      <div class="timeline-date">2010s</div>
+      <div class="timeline-desc">Intégration industrielle / ONG</div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-circle"></div>
+      <div class="timeline-date">2020+</div>
+      <div class="timeline-desc">IA, Worldcoin, RGPD</div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-circle"></div>
+      <div class="timeline-date">2025</div>
+      <div class="timeline-desc">Paiement par iris (Mastercard / PayEye)</div>
+    </div>
+  </div>
+</section>
+<style>
+  .timeline-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 0;
+    overflow-x: auto;
+  }
+  .timeline-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 150px;
+  }
+  .timeline-circle {
+    width: 18px;
+    height: 18px;
+    background-color: #1e88e5;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+  }
+  .timeline-circle:hover {
+    background-color: #f50057;
+    transform: scale(1.3);
+  }
+  .timeline-date {
+    font-weight: bold;
+    color: #1e88e5;
+    margin-bottom: 5px;
+  }
+  .timeline-desc {
+    font-size: 0.9rem;
+    color: #555;
+  }
+</style>
+      <section>
+        <h2>Fonctionnement</h2>
+        <p>Le scan rétinien utilise une caméra infrarouge pour capturer une image du fond de l’œil. Ce motif est ensuite comparé à une base de données sécurisée. Ce système requiert un positionnement précis de l’œil face au scanner, ce qui limite les usages à distance.</p>
+      </section>
+      <section>
+        <h2>Cybersécurité et protection des systèmes</h2>
+        <p>La biométrie rétinienne est utilisée pour sécuriser l’accès à des systèmes critiques dans les secteurs sensibles comme la défense, les infrastructures gouvernementales ou la finance. Des entités telles que le FBI, la NASA ou encore certaines banques emploient ces technologies pour garantir une authentification impossible à usurper.</p>
+        <ul>
+          <li>Fiabilité extrême face aux tentatives de fraude.</li>
+          <li>Application en authentification forte (2FA biométrique).</li>
+          <li>Couplage avec des solutions IAM (Identity Access Management).</li>
+        </ul>
+        <div class="example-box">
+          🔐 <strong>Exemple :</strong> Des entreprises intègrent le scan rétinien à l’entrée de leurs data centers pour compléter l’identification badge + mot de passe.
+        </div>
+      </section>
+      <section>
+        <h2>Innovations et projets récents (2024-2025)</h2>
+        <ul>
+          <li><strong>Santé :</strong> Des hôpitaux utilisent le scan rétinien pour authentifier les patients et consulter leur dossier médical. Des algorithmes IA prédisent certaines maladies à partir des motifs rétiniens.</li>
+          <li><strong>Cybersécurité :</strong> FBI, NASA et d'autres entités sensibles utilisent des scanners rétiniens pour sécuriser l'accès aux installations critiques.</li>
+          <li><strong>Finance :</strong> Mastercard et PayEye ont lancé un pilote en Pologne pour le paiement par reconnaissance d’iris (EyePOS), permettant de payer d’un simple regard.</li>
+          <li><strong>Transports :</strong> Dubaï et les USA ont massivement déployé des contrôles par iris dans les aéroports pour fluidifier le passage des frontières.</li>
+          <li><strong>Identité numérique :</strong> Worldcoin, projet mondial d’identité biométrique basé sur l’iris, a été suspendu dans plusieurs pays pour des raisons liées au RGPD.</li>
+        </ul>
+        <div class="example-box">
+          📌 <strong>Exemple :</strong> En 2024, plus de 21 millions de passagers ont traversé l’aéroport de Dubaï via les portiques intelligents scannant leur visage ou leur iris, sans montrer leur passeport.
+        </div>
+      </section>
+      <section>
+        <h2>Enjeux éthiques et juridiques</h2>
+        <p>Les données biométriques oculaires sont considérées comme sensibles. Leur traitement est encadré par le RGPD. Les polémiques autour de Worldcoin et d’autres projets soulèvent des inquiétudes sur la surveillance, la vie privée, et le consentement éclairé. De nombreux pays exigent que les données d’iris soient chiffrées et que leur usage soit proportionné.</p>
+      </section>
+      <section>
+        <h2>Conclusion</h2>
+        <p>En 2025, la biométrie par la rétine reste une technologie de niche mais très prometteuse. Utilisée dans les domaines de la sécurité, de la santé et des transports, elle offre un haut niveau de fiabilité mais doit être encadrée strictement pour éviter les dérives. Son futur dépendra de l’équilibre entre innovation et respect des libertés individuelles.</p>
+      </section>
+      <section>
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://www.cnil.fr/fr/biometrie-et-rgpd" target="_blank">CNIL - Données biométriques</a></li>
+          <li><a href="https://www.reuters.com/technology/worldcoin-suspended-privacy-concerns-2024-12-20/" target="_blank">Reuters - Suspension de Worldcoin</a></li>
+          <li><a href="https://www.wsj.com/articles/iris-scan-biometrics-regulation-debate-2025" target="_blank">Wall Street Journal - Débats sur la biométrie</a></li>
+          <li><a href="https://www.biometricupdate.com" target="_blank">Biometric Update - Technologies 2024-2025</a></li>
+        </ul>
+      </section>
+      <div class="image-gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Iris_scan.jpg" alt="Illustration du scan rétinien">
+        <img src="https://www.biometricupdate.com/wp-content/uploads/2023/10/worldcoin-orb.jpg" alt="Appareil Worldcoin Orb">
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 – Veille Technologique : Biométrie Rétinienne
+  </footer>
+</body>
+</html>
